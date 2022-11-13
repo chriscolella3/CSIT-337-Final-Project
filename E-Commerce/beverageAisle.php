@@ -18,8 +18,9 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title>FoodTropolis Store</title>
+  <title>E-Commerce Store</title>
 </head>
+
 
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="dropdown.css">
@@ -27,7 +28,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 </head>
 <body>
-    <style>
+
+<style>
       body{
     background: rgb(102,182,215);
     background: linear-gradient(180deg, rgba(102,182,215,1) 0%, rgba(255,251,251,1) 47%, rgba(230,230,230,1) 100%);
@@ -39,11 +41,11 @@ if (!isset($_SESSION['loggedin'])) {
 </style>
 
 <div class="topnav">
-  <a class="active" href="customer_home.php">Home</a>
+  <a href="customer_home.php">Home</a>
   <a href="fruitAisle.php">Fruits</a>
   <a href="vegetableAisle.php">Vegetables</a>
   <a href="dairyAisle.php">Dairy</a>
-  <a href="beverageAisle.php">Beverages</a>
+  <a class="active" href="beverageAisle.php">Beverages</a>
   <a href="bakeryAisle.php">Bakery</a>
   <a href="frozenFoodAisle.php">Frozen Foods</a>
   <a href="customer_home.php">Shopping Cart</a>
@@ -56,18 +58,18 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
 
 <center>
-<h2>FoodTropolis: Customer</h2>
-<h3>Welcome <?=$_SESSION['name']?>!</h3>
-<h4>Browse Our Selections!</h4>
+<h2>Welcome <?=$_SESSION['name']?>!</h2>
+<h3>Beverage Aisle</h3>
 </center>
-
 
 <div class="grid-container">
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="fruits1.jpg" style="width:90%">
-              <p>Fruit Aisle</p>
+              <img src="corn.jpg" style="width:90%">
+              <p>Corn</p>
+              <p>$3.99</p>
+              <p><button>Add to Cart</button></p>
            </div>
         </div>
   </div>
@@ -75,8 +77,10 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="vegetables.jpg" style="width:90%">
-              <p>Vegetable Aisle</p>
+              <img src="tomato.jpg" style="width:90%">
+              <p>Tomato</p>
+              <p>$3.99</p>
+              <p><button>Add to Cart</button></p>
            </div>
         </div>
   </div>
@@ -84,8 +88,10 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="dairy.jpg" style="width:90%">
-              <p>Dairy Aisle</p>
+              <img src="Lettuce.jpg" style="width:90%">
+              <p>Lettuce</p>
+              <p>$3.99</p>
+              <p><button>Add to Cart</button></p>
            </div>
         </div>
   </div>  
@@ -93,7 +99,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="column">
            <div class="card">
               <img src="onions.jpg" style="width:90%">
-              <p>Beverage Aisle</p>
+              <p>Onions</p>
+              <p>$3.99</p>
+              <p><button>Add to Cart</button></p>
            </div>
         </div>
   </div>
@@ -101,7 +109,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="column">
         <div class="card">
            <img src="avocado.jpg" style="width:90%">
-           <p>Bakery Aisle</p>
+           <p>Avocado</p>
+           <p>$3.99</p>
+           <p><button>Add to Cart</button></p>
         </div>
      </div>
   </div>
@@ -110,13 +120,19 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="column">
         <div class="card">
            <img src="avocado.jpg" style="width:90%">
-           <p>Frozen Foods Aisle</p>
+           <p>Cucumber</p>
+           <p>$3.99</p>
+           <p><button>Add to Cart</button></p>
         </div>
      </div>
   </div>
   </div>  
 
 </div>
+
+<footer>
+   <div class="content"></div>
+</footer>
 
 </center>
 </body>
