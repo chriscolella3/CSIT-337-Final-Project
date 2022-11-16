@@ -1,36 +1,52 @@
 <!DOCTYPE html>
- <!--
+<!--
 Written by Chris Colella
 Database Systems
 May 10 2022-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FoodTropolis Employee Registration</title>
+    <title>FoodTropolis Register Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  body {
+  background-image: url('StoreIm.jpg');
+}
+a:link {
+  color:white;  
+}
+a:visited {
+  color:white;  
+}
+a:hover {
+  color:white !important;  
+}
+a:active {
+  color:white;  
+}
+</style>
 </head>
 <body>
 <center>
-    <h2>FoodTropolis </h2>
-    <h3>Employee Registration</h3>
+    <h2>FoodTropolis</h2>
+    <h3>Customer Registration Form</h3>
     
-    <form action="register.php" method="post">
+    <form action="customer_register.php" method="post">
 	<br />
-    Enter Your Username:<br />
-    <input name="username" placeholder= "Username" type="text" size="20">
+    <b>Enter Your Username:<br></b>
+    <input name="username" placeholder="Username" type="text" size="20">
     <br/>
-    Enter Your Password:<br />
+    <b>Enter Your Password:<br></b>
     <input name="password" placeholder="Password" type="text" size="20">
     <br/>
 
-
 	<br>
-    <input type="submit" name="submit"  class="btn btn-success mt-3" value="Register">
+    <input type="submit" name="submit"  class="btn btn-success mt-3" value="Register"
+      
       </form>
     
-      <p>Already have an account? <a href="fruit_login.html">Login here</a>.</p>
-  <br/>
-  
+      <b><p class = "text-xl-center">Do you already have an account? <a href="fruit_login.html">Then login here</a></p></b>
+<br/>
 </center>
 </body>
 </html>
