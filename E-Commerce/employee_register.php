@@ -22,7 +22,7 @@ $masterpass = "12345montclair";
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Make sure the submitted registration values are not empty
-if (empty($username) || empty($password) || empty($masterpassword)) {
+if (empty($username) || empty($password)) {
 	// One or more values are empty.
 	exit('Please fill out all fields.');
 }
@@ -38,9 +38,7 @@ if (preg_match('/^[a-zA-Z0-9]+$/', $password) == 0) {
     exit('Password is not valid!');
 }
 
-if ($masterpassword != $masterpass){
-    exit('Master Password is incorrect!');
-}
+
 
 // Check if username exists
 if ($stmt = $con->prepare('SELECT password FROM users WHERE username = ?')) {
@@ -58,7 +56,7 @@ if ($stmt = $con->prepare('INSERT INTO users (username, password, usertype) VALU
 	$stmt->bind_param('sss', $username, $hashed_password, $usertype);
 	$stmt->execute();
 
-header('Location: fruit_login.html');
+header('Location: FoodTropolis_login.html');
 
          }
     }
