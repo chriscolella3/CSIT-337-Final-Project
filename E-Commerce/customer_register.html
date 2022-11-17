@@ -6,9 +6,27 @@ May 10 2022-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FoodTropolis Register Page</title>
+    <title>FoodTropolis Customer Register Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<style>
+    body {
+    background-image: url('StoreIm.jpg');
+  }
+  a:link {
+    color:white;  
+  }
+  a:visited {
+    color:white;  
+  }
+  a:hover {
+    color:white !important;  
+  }
+  a:active {
+    color:white;  
+  }
+  </style>
+  </head>
 <body>
 <center>
     <h2>FoodTropolis</h2>
@@ -16,10 +34,10 @@ May 10 2022-->
     
     <form action="customer_register.php" method="post">
 	<br />
-    Enter Your Username:<br />
+    <b>Enter Your Username:<br></b>
     <input name="username" placeholder="Username" type="text" size="20">
     <br/>
-    Enter Your Password:<br />
+    <b>Enter Your Password:<br></b>
     <input name="password" placeholder="Password" type="text" size="20">
     <br/>
 
@@ -28,7 +46,7 @@ May 10 2022-->
       
       </form>
     
-      <p>Already have an account? <a href="fruit_login.html">Login here</a>.</p>
+      <b><p class = "text-xl-center">Already have an account? <a href="fruit_login.html">Login here</a></p></b>
   <br/>
   
 </center>
