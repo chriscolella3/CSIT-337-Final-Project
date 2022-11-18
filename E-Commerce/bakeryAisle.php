@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title>E-Commerce Store</title>
+  <title> E-Commerce Store</title>
 </head>
 
 
