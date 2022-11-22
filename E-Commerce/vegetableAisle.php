@@ -141,7 +141,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
+           <img src="cucumber.jpg" style="width:90%">
            <b><p>Cucumber<p></b>
            <b><p>$3.99</p></b>
               <label for="quantity">Insert Quantity of Item :</label>
