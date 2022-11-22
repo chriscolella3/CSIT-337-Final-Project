@@ -92,7 +92,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="onions.jpg" style="width:90%">
+              <img src="drinksbeverage1.jpg" style="width:90%">
               <p>Beverage Aisle</p>
            </div>
         </div>
@@ -100,7 +100,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
+           <img src="bakery1.jpg" style="width:90%">
            <p>Bakery Aisle</p>
         </div>
      </div>
@@ -109,7 +109,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
+           <img src="frozenfoods1.jpg" style="width:90%">
            <p>Frozen Foods Aisle</p>
         </div>
      </div>
