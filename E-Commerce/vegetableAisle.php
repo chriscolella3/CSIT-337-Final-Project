@@ -73,6 +73,7 @@ if (!isset($_SESSION['loggedin'])) {
 <h2>Welcome <?=$_SESSION['name']?>!</h2>
 <h3>Vegetable Aisle</h3>
 </center>
+
 <div class="grid-container">
   <div class="grid-item">
   <div class="column">
