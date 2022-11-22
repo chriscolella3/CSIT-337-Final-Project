@@ -73,12 +73,14 @@ if (!isset($_SESSION['loggedin'])) {
 <h2>Welcome <?=$_SESSION['name']?>!</h2>
 <h3>Fruit Aisle</h3>
 </center>
+
+
 <div class="grid-container">
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="corn.jpg" style="width:90%">
-              <b><p>Corn<p></b>
+              <img src="apple.jpg" style="width:90%">
+              <b><p>Apple></b>
                 <b><p>$3.99<p></b>
                 <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
@@ -90,8 +92,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="tomato.jpg" style="width:90%">
-              <b><p>Tomato<p></b>
+              <img src="Banana.jpg" style="width:90%">
+              <b><p>Banana<p></b>
              <b><p>$3.99</p></b>
              <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
@@ -103,8 +105,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="Lettuce.jpg" style="width:90%">
-              <b><p>Lettuce<p></b>
+              <img src="orange.jpg" style="width:90%">
+              <b><p>Orange<p></b>
                <b><p>$3.99</p></b>
                    <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
@@ -115,8 +117,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="onions.jpg" style="width:90%">
-              <b><p>Onions<p></b>
+              <img src="grapes.jpg" style="width:90%">
+              <b><p>Grapes<p></b>
                <b><p>$3.99</p></b>
                   <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
@@ -127,8 +129,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
-           <b><p>Avocado<p></b>
+           <img src="strawberries.jpg" style="width:90%">
+           <b><p>Strawberries<p></b>
           <b><p>$3.99<p></b>
             <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
@@ -140,8 +142,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
-           <b><p>Cucumber<p></b>
+           <img src="blueberries.jpg" style="width:90%">
+           <b><p>Blueberries<p></b>
            <b><p>$3.99</p></b>
               <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
