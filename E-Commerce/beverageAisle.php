@@ -73,13 +73,14 @@ if (!isset($_SESSION['loggedin'])) {
 <h2>Welcome <?=$_SESSION['name']?>!</h2>
 <h3>Beverage Aisle</h3>
 </center>
+
 <div class="grid-container">
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="corn.jpg" style="width:90%">
-              <b><p>Corn<p></b>
-                <b><p>$3.99<p></b>
+              <img src="CocaCola.jpg" style="width:90%">
+              <b><p>Coca Cola<p></b>
+                <b><p>$2.29<p></b>
                 <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -90,9 +91,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="tomato.jpg" style="width:90%">
-              <b><p>Tomato<p></b>
-             <b><p>$3.99</p></b>
+              <img src="Fanta.jpg" style="width:90%">
+              <b><p>Fanta<p></b>
+             <b><p>$2.29</p></b>
              <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
              <a href="#" class="button">Add to Cart</a>
@@ -103,9 +104,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="Lettuce.jpg" style="width:90%">
-              <b><p>Lettuce<p></b>
-               <b><p>$3.99</p></b>
+              <img src="Sprite.jpg" style="width:90%">
+              <b><p>Sprite<p></b>
+               <b><p>$2.29</p></b>
                    <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -115,9 +116,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="onions.jpg" style="width:90%">
-              <b><p>Onions<p></b>
-               <b><p>$3.99</p></b>
+              <img src="icetea.jpg" style="width:90%">
+              <b><p>Arizona Ice Team<p></b>
+               <b><p>$3.49</p></b>
                   <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -127,9 +128,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
-           <b><p>Avocado<p></b>
-          <b><p>$3.99<p></b>
+           <img src="fruitpunch.jpg" style="width:90%">
+           <b><p>Hawaiian Punch<p></b>
+          <b><p>$2.99<p></b>
             <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
            <a href="#" class="button">Add to Cart</a>
@@ -140,9 +141,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
-           <b><p>Cucumber<p></b>
-           <b><p>$3.99</p></b>
+           <img src="juiceapple.jpg" style="width:90%">
+           <b><p>Mott Apple Juice<p></b>
+           <b><p>$1.99</p></b>
               <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
            <a href="#" class="button">Add to Cart</a>
