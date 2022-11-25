@@ -1,0 +1,3 @@
+Make sure you upload the database included with this assignment
+on canvas. 
+Then these files go into htdocs in XAMPP and you should be good to go.
