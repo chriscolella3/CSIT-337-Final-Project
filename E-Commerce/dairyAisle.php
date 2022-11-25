@@ -3,16 +3,7 @@
 // Database Systems
 // May 10 2022
 session_start();
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'ecommerce_website';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-// If the user is not logged in redirect them to the login page
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: FoodTropolis_login.html');
-	exit;
-}
+
 
 ?>
 
@@ -60,7 +51,7 @@ if (!isset($_SESSION['loggedin'])) {
   <a href="beverageAisle.php">Beverages</a>
   <a href="bakeryAisle.php">Bakery</a>
   <a href="frozenFoodAisle.php">Frozen Foods</a>
-  <a href="customer_home.php">Shopping Cart</a>
+  <a href="shoppingCart.php">Shopping Cart</a>
   <div class="dropdown">
     <button class="dropbtn">Logged in as:<?=$_SESSION['name']?> &#8595</button>
     <div class="dropdown-content">
@@ -80,7 +71,7 @@ if (!isset($_SESSION['loggedin'])) {
            <div class="card">
               <img src="wholemilk.jpg" style="width:90%">
               <b><p>Whole Milk<p></b>
-                <b><p>$1.99<p></b>
+                <b><p>$3.99<p></b>
                 <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -93,7 +84,7 @@ if (!isset($_SESSION['loggedin'])) {
            <div class="card">
               <img src="kraftcheese.jpg" style="width:90%">
               <b><p>Kraft American Cheese<p></b>
-             <b><p>$2.59</p></b>
+             <b><p>$3.99</p></b>
              <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
              <a href="#" class="button">Add to Cart</a>
@@ -106,7 +97,7 @@ if (!isset($_SESSION['loggedin'])) {
            <div class="card">
               <img src="bluebutter.jpg" style="width:90%">
               <b><p>Blue Bonnet Butter<p></b>
-               <b><p>$3.29</p></b>
+               <b><p>$3.99</p></b>
                    <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -130,7 +121,7 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="card">
            <img src="creamcheese.jpg" style="width:90%">
            <b><p>Philadelphia Cream Cheese<p></b>
-          <b><p>$2.99<p></b>
+          <b><p>$3.99<p></b>
             <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
            <a href="#" class="button">Add to Cart</a>
@@ -143,7 +134,7 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="card">
            <img src="chocomilk.jpg" style="width:90%">
            <b><p>Tru Moo Chocolate Milk<p></b>
-           <b><p>$2.99</p></b>
+           <b><p>$3.99</p></b>
               <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
            <a href="#" class="button">Add to Cart</a>

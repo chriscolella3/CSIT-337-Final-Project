@@ -3,16 +3,7 @@
 // Database Systems
 // May 10 2022
 session_start();
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'ecommerce_website';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-// If the user is not logged in redirect them to the login page
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: FoodTropolis_login.html');
-	exit;
-}
+
 
 ?>
 
@@ -60,7 +51,7 @@ if (!isset($_SESSION['loggedin'])) {
   <a href="beverageAisle.php">Beverages</a>
   <a href="bakeryAisle.php">Bakery</a>
   <a class="active" href="frozenFoodAisle.php">Frozen Foods</a>
-  <a href="customer_home.php">Shopping Cart</a>
+  <a href="shoppingCart.php">Shopping Cart</a>
   <div class="dropdown">
     <button class="dropbtn">Logged in as:<?=$_SESSION['name']?> &#8595</button>
     <div class="dropdown-content">
@@ -73,14 +64,13 @@ if (!isset($_SESSION['loggedin'])) {
 <h2>Welcome <?=$_SESSION['name']?>!</h2>
 <h3>Frozen Foods Aisle</h3>
 </center>
-
 <div class="grid-container">
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="vanillaice.jpg" style="width:90%">
-              <b><p>Vanilla Ice Cream<p></b>
-                <b><p>$3.19<p></b>
+              <img src="corn.jpg" style="width:90%">
+              <b><p>Corn<p></b>
+                <b><p>$3.99<p></b>
                 <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -91,9 +81,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="chocolateice.jpg" style="width:90%">
-              <b><p>Chocolate Ice Cream<p></b>
-             <b><p>$3.19</p></b>
+              <img src="tomato.jpg" style="width:90%">
+              <b><p>Tomato<p></b>
+             <b><p>$3.99</p></b>
              <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
              <a href="#" class="button">Add to Cart</a>
@@ -104,9 +94,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="drumsticks.jpg" style="width:90%">
-              <b><p>Ice Cream Cones Drumsticks<p></b>
-               <b><p>$5.49</p></b>
+              <img src="Lettuce.jpg" style="width:90%">
+              <b><p>Lettuce<p></b>
+               <b><p>$3.99</p></b>
                    <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -116,9 +106,9 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="nuggets.jpg" style="width:90%">
-              <b><p>Chicken Nuggest<p></b>
-               <b><p>$3.49</p></b>
+              <img src="onions.jpg" style="width:90%">
+              <b><p>Onions<p></b>
+               <b><p>$3.99</p></b>
                   <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -128,8 +118,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="TVDinner.jpg" style="width:90%">
-           <b><p>Banquet TV Dinner<p></b>
+           <img src="avocado.jpg" style="width:90%">
+           <b><p>Avocado<p></b>
           <b><p>$3.99<p></b>
             <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
@@ -141,8 +131,8 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="goldenfries.jpeg" style="width:90%">
-           <b><p>Golden French Fries<p></b>
+           <img src="avocado.jpg" style="width:90%">
+           <b><p>Cucumber<p></b>
            <b><p>$3.99</p></b>
               <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">

@@ -32,22 +32,28 @@ a:active {
 	<h2>Welcome to FoodTropolis</h2>
 	<h3>Login Page </h3>
 
-
   <form action="authenticate.php" method="post">
 	<br />
     <b>Username:<br></b>
     <input name="username" placeholder="Enter Username" type="text" size="20">
-    <br />
-    <br />
+    <br/>
+    <br/>
     <b>Password:<br></b>
     <input name="password" placeholder="Enter Password" type="text" size="20">
-    <br />
+    <br/>
+    <br/>
+
+    <b>Usertype:<br></b>
+    <select name="usertype">
+      <option value="customer">Customer</option>
+      <option value="employee">Employee</option>
+
+    </select>
 
 	<br>
-    <input type="submit" name="submit"   class="btn btn-success mt-3" value="Login to Account">
+    <input type="submit" name="submit" class="btn btn-success mt-3" value="Login to Account">
 
   </form>
-
 
 <div class="col-12">
 <b><p class ="text-xl-center">Are you an Employee and don't have an account? <a href="employee_register.html">Click here to register.</a></p></b>
