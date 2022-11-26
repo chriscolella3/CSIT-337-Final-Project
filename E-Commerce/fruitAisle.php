@@ -71,7 +71,7 @@ session_start();
            <div class="card">
               <img src="apple.jpg" style="width:90%">
               <b><p>Apple></b>
-                <b><p>$3.99<p></b>
+                <b><p>$0.75<p></b>
                 <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
            <form action="shoppingCart.php">
@@ -86,7 +86,7 @@ session_start();
            <div class="card">
               <img src="Banana.jpg" style="width:90%">
               <b><p>Banana<p></b>
-             <b><p>$3.99</p></b>
+             <b><p>$1.00</p></b>
              <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
              <a href="#" class="button">Add to Cart</a>
@@ -99,7 +99,7 @@ session_start();
            <div class="card">
               <img src="orange.jpg" style="width:90%">
               <b><p>Orange<p></b>
-               <b><p>$3.99</p></b>
+               <b><p>$0.89</p></b>
                    <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -111,7 +111,7 @@ session_start();
            <div class="card">
               <img src="grapes.jpg" style="width:90%">
               <b><p>Grapes<p></b>
-               <b><p>$3.99</p></b>
+               <b><p>$2.00</p></b>
                   <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
               <a href="#" class="button">Add to Cart</a>
@@ -123,7 +123,7 @@ session_start();
         <div class="card">
            <img src="strawberries.jpg" style="width:90%">
            <b><p>Strawberries<p></b>
-          <b><p>$3.99<p></b>
+          <b><p>$2.99<p></b>
             <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
            <a href="#" class="button">Add to Cart</a>
@@ -136,7 +136,7 @@ session_start();
         <div class="card">
            <img src="blueberries.jpg" style="width:90%">
            <b><p>Blueberries<p></b>
-           <b><p>$3.99</p></b>
+           <b><p>$2.99</p></b>
               <label for="quantity">Insert Quantity of Item :</label>
            <input type="number" id="quantity" name="quantity" min="1" max="5">
            <a href="#" class="button">Add to Cart</a>
