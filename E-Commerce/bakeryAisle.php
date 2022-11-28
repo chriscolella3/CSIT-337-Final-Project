@@ -56,8 +56,19 @@ session_start();
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="corn.jpg" style="width:90%">
-              <p>Corn</p>
+              <img src="cookies.jpg" style="width:90%">
+              <p>Cookies</p>
+              <p>$4.99</p>
+              <p><button>Add to Cart</button></p>
+           </div>
+        </div>
+  </div>
+
+  <div class="grid-item">
+  <div class="column">
+           <div class="card">
+              <img src="cupcakes.jpg" style="width:90%">
+              <p>Cupcakes</p>
               <p>$3.99</p>
               <p><button>Add to Cart</button></p>
            </div>
@@ -67,19 +78,8 @@ session_start();
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="tomato.jpg" style="width:90%">
-              <p>Tomato</p>
-              <p>$3.99</p>
-              <p><button>Add to Cart</button></p>
-           </div>
-        </div>
-  </div>
-
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="Lettuce.jpg" style="width:90%">
-              <p>Lettuce</p>
+              <img src="muffins.jpg" style="width:90%">
+              <p>Muffin</p>
               <p>$3.99</p>
               <p><button>Add to Cart</button></p>
            </div>
@@ -88,9 +88,9 @@ session_start();
   <div class="grid-item">
   <div class="column">
            <div class="card">
-              <img src="onions.jpg" style="width:90%">
-              <p>Onions</p>
-              <p>$3.99</p>
+              <img src="croissants.jpg" style="width:90%">
+              <p>Croissants</p>
+              <p>$2.99</p>
               <p><button>Add to Cart</button></p>
            </div>
         </div>
@@ -98,9 +98,9 @@ session_start();
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
-           <p>Avocado</p>
-           <p>$3.99</p>
+           <img src="poundcake.jpg" style="width:90%">
+           <p>Chocolate Pound Cake</p>
+           <p>$3.49</p>
            <p><button>Add to Cart</button></p>
         </div>
      </div>
@@ -109,9 +109,9 @@ session_start();
   <div class="grid-item">
   <div class="column">
         <div class="card">
-           <img src="avocado.jpg" style="width:90%">
-           <p>Cucumber</p>
-           <p>$3.99</p>
+           <img src="donuts.jpg" style="width:90%">
+           <p>Dounts</p>
+           <p>$5.99</p>
            <p><button>Add to Cart</button></p>
         </div>
      </div>
