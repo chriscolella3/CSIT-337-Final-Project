@@ -37,12 +37,14 @@ if ($result) {
         </style>";
 
         if($searchterm == '*'){
-            
+
         echo "<tr>
+
         <td> $result[RoomNumber] </td>
         <td> $result[Capacity] </td>
         <td> $result[Type] </td>
         <td> $result[Available] </td>
+
         </tr>";
         }elseif ($searchterm == 'RoomNumber'){
             echo "<tr>

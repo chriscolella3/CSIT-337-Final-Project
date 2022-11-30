@@ -19,12 +19,12 @@
 <form action="get_results.php" method="post">
 
   <label>Select a field to display:</label>
-  <select name="searchterm">
-    <option value="*">*</option>
-    <option value="RoomNumber">RoomNumber</option>
-    <option value="Capacity">Capacity</option>
-    <option value="Type">Type</option>
-    <option value="Available">Available</option>
+  <select name= "searchterm">
+    <option value= "*">*</option>
+    <option value= "RoomNumber">RoomNumber</option>
+    <option value= "Capacity">Capacity</option>
+    <option value= "Type">Type</option>
+    <option value= "Available">Available</option>
   </select>
   <br><br>
   <input type="submit" value="Send Query">
