@@ -1,27 +1,73 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=HawkCenter'; 
-# use 'hawk_manager' and 'hawk_eyes' as username and password 
-    $username = 'hawk_manager';   
-    $password = 'hawk_eyes'; 
- 
-    try { 
-        $db = new PDO($dsn, $username, $password); 
-    } catch (PDOException $e) { 
-        $error_message = $e->getMessage(); 
-        include('database_error.php'); 
-        exit(); 
-    } 
+$dsn = "mysql:host=localhost;dbname=hawkcenter"; 
+$conn = new PDO ($dsn, "hawk_manager", "hawk_eyes"); 
 
+$searchterm = $_POST['searchterm'];
 
-$searchtype=$_POST['searchtype'];
+$stmt = $conn->prepare("SELECT $searchterm FROM rooms");
+$stmt->execute();
 
-$sql = 'SELECT $searchtype from rooms';
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$stmt = $db->query($sql);
+$sql = "SELECT $searchterm FROM rooms";
+$res = $conn->query($sql);
+$count = $res->rowCount();
+echo "<html>
+<body style=background-color:#fffce4>
+</html>";
 
+if ($result) {
 
-echo $stmt;
+    echo "<caption>Results of SELECT $searchterm FROM rooms</caption>";
+    echo "<table style=width:35%>";
 
+    echo "<tr>
+    <th>$searchterm</th> 
+    </tr>";
+	foreach ($result as $result) {
+        echo "<style>
+        table{
+            border: 1px solid;
+        }
+
+          tr:nth-child(odd) {
+            background-color: #b0dce4;
+          }
+        </style>";
+
+        if($searchterm == '*'){
+            
+        echo "<tr>
+        <td> $result[RoomNumber] </td>
+        <td> $result[Capacity] </td>
+        <td> $result[Type] </td>
+        <td> $result[Available] </td>
+        </tr>";
+        }elseif ($searchterm == 'RoomNumber'){
+            echo "<tr>
+            <td> $result[RoomNumber] </td>
+            </tr>";
+        }elseif($searchterm == 'Capacity'){
+            echo "<tr>
+            <td> $result[Capacity] </td>
+            </tr>";
+        }elseif($searchterm == 'Available'){
+            echo "<tr>
+            <td> $result[Available] </td>
+            </tr>";
+        }
+
+	}
+    echo "</table>";
+    echo "Your search yielded $count results";
+    echo "<br>";
+    echo "Thank you for using HawkCenter datbase.";
+    echo "<p><a href=index.php>Go Back to Hawk Home</a></p>";
+}
+
+$conn = null;
 
 ?>
+
+
