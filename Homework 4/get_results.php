@@ -20,7 +20,7 @@ echo "<html>
 if ($result) {
 
     echo "<caption>Results of SELECT $searchterm FROM rooms</caption>";
-    echo "<table style=width:35%>";
+    echo "<table style=width:25%>";
 
     echo "<tr>
     <th>$searchterm</th> 

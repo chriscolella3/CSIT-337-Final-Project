@@ -1,4 +1,7 @@
 
+
+<?php
+echo"
 <html>
   <head>
 <h1>Hawk Center Manager</h1>  
@@ -14,28 +17,30 @@ label {
 
 </head>
 <body>
-<form action="/get_results.php" method="post">
-<div class="block">
-    <label>RoomNumber:</label>
-    <input type="text">
+<form action=add_room.php method=post>
+<div class=block>
+    <label name=roomnumber >RoomNumber:</label>
+    <input type=text>
 </div>
-<div class="block">
-    <label>Capacity:</label>
-    <input type="text">
+<div class=block>
+    <label name=capacity >Capacity:</label>
+    <input type=text>
 </div>
-<div class="block">
-    <label>Type:</label>
-    <input type="text" />
+<div class=block>
+    <label name=rtype >Type:</label>
+    <input type=text />
 </div>
-<div class="block">
-    <label>Available:</label>
-    <input type="text" />
+<div class=block>
+    <label name=available >Available:</label>
+    <input type=text />
 </div>
-    <input type="submit" value="Add Room">
+    <input type=submit value=Add Room>
 
-    <p><a href="index.php">Go Back to Hawk Home</a></p>
+    <p><a href=index.php>Go Back to Hawk Home</a></p>
 
 </div>
 </form>
 </body>
 </html>
+";
+?>
