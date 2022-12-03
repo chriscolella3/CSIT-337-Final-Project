@@ -1,5 +1,13 @@
-
 <html>
+  <!-- 
+Written by Chris Colella, Renato Vilchez, Christian Gelin
+Homework 4
+12/3/2022
+
+This form takes in 4 inputs from the user
+And will insert them into the database
+
+-->
   <head>
 <h1>Hawk Center Manager</h1>  
 

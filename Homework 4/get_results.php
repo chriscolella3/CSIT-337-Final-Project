@@ -1,5 +1,9 @@
 <?php
+// Written by Chris Colella, Renato Vilchez, Christian Gelin
+// Homework 4
+// 12/3/2022
 
+// Database connection
 $dsn = "mysql:host=localhost;dbname=hawkcenter"; 
 $conn = new PDO ($dsn, "hawk_manager", "hawk_eyes"); 
 
@@ -19,48 +23,96 @@ echo "<html>
 
 if ($result) {
 
-    echo "<caption>Results of SELECT $searchterm FROM rooms</caption>";
-    echo "<table style=width:25%>";
+    echo "<caption>Results of: SELECT $searchterm FROM rooms</caption>";
+    echo "<table style=width:20%>";
 
     echo "<tr>
-    <th>$searchterm</th> 
+
     </tr>";
-	foreach ($result as $result) {
+
         echo "<style>
         table{
             border: 1px solid;
+            background-color: #ffffff
         }
 
-          tr:nth-child(odd) {
+        th{
+            background-color: #ffffff
+        }
+
+          tr:nth-child(even) {
             background-color: #b0dce4;
           }
         </style>";
-
+        
+        // Table for the * field
         if($searchterm == '*'){
+            echo"
+            <th>RoomNumber</th>
+            <th>Capacity</th>
+            <th>Type</th>
+            <th>Available</th>";
 
+            foreach ($result as $result) {
         echo "<tr>
-
+        
         <td> $result[RoomNumber] </td>
         <td> $result[Capacity] </td>
         <td> $result[Type] </td>
         <td> $result[Available] </td>
-
         </tr>";
-        }elseif ($searchterm == 'RoomNumber'){
-            echo "<tr>
-            <td> $result[RoomNumber] </td>
-            </tr>";
-        }elseif($searchterm == 'Capacity'){
-            echo "<tr>
-            <td> $result[Capacity] </td>
-            </tr>";
-        }elseif($searchterm == 'Available'){
-            echo "<tr>
-            <td> $result[Available] </td>
-            </tr>";
+            }
         }
 
-	}
+        // Table for the RoomNumber field
+        if($searchterm == 'RoomNumber'){
+            echo"
+            <th>RoomNumber</th>";
+
+            foreach ($result as $result) {
+        echo "<tr>
+        <td> $result[RoomNumber] </td>
+        </tr>";
+            }
+        }
+
+        // Table for the Capacity Field
+        if($searchterm == 'Capacity'){
+            echo"
+            <th>Capacity</th>";
+
+
+            foreach ($result as $result) {
+        echo "<tr>
+        <td> $result[Capacity] </td>
+        </tr>";
+            }
+        }
+        // Table for the Type Field
+        if($searchterm == 'Type'){
+            echo"
+            <th>Type</th>";
+
+
+            foreach ($result as $result) {
+        echo "<tr>
+        <td> $result[Type] </td>
+        </tr>";
+            }
+        }
+
+        // Table for the Capacity Field
+        if($searchterm == 'Available'){
+            echo"
+            <th>Available</th>";
+
+
+            foreach ($result as $result) {
+        echo "<tr>
+        <td> $result[Available] </td>
+        </tr>";
+            }
+        }
     echo "</table>";
     echo "Your search yielded $count results";
     echo "<br>";

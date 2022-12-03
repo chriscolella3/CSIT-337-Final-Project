@@ -1,5 +1,9 @@
 <?php
+// Written by Chris Colella, Renato Vilchez, Christian Gelin
+// Homework 4
+// 12/3/2022
 
+// Database connection
 $dsn = "mysql:host=localhost;dbname=hawkcenter"; 
 $conn = new PDO ($dsn, "hawk_manager", "hawk_eyes"); 
 
@@ -18,7 +22,6 @@ if (empty($roomnumber) || empty($capacity) || empty($rtype) || empty($available)
     $stmt->execute();
     header('Location: index.php'); 
 }
-
 
 $conn = null;
 
