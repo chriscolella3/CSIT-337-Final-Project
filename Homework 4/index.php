@@ -6,6 +6,7 @@
 // Database connection
  $dsn = "mysql:host=localhost;dbname=hawkcenter"; 
  $conn = new PDO ($dsn, "hawk_manager", "hawk_eyes"); 
+
 ?>
 
 <html>
@@ -15,12 +16,20 @@
   </head>
   <body>
 
+<style>
+  hr
+{
+margin-right: 1500px;
+}
+  </style>
+
 <h1>Welcome to Chris Colella, Renato Vilchez, Christian Gelin Hawk Center</h1>  
 
 <h2>Querying Hawk Center database</h2>
 
 <form action="get_results.php" method="post">
-
+  
+<hr size="2" width="45%" color="green">
   <label>Select a field to display:</label>
   <select name= "searchterm">
     <option value= "*">*</option>
@@ -34,11 +43,11 @@
 </form>
 
 <p><a href="add_room_form.php">Add a new room</a></p>
-
+<hr size="2" width="45%" color="green">
   </body>
 </html>
 
-
+<footer>&copy; 2022 Hawk Center</footer>
 
 
 

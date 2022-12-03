@@ -19,13 +19,19 @@ $res = $conn->query($sql);
 $count = $res->rowCount();
 echo "<html>
 <body style=background-color:#fffce4>
+
+<style>
+  hr
+{
+margin-right: 1500px;
+}
+  </style>
 </html>";
 
 if ($result) {
-
-    echo "<caption>Results of: SELECT $searchterm FROM rooms</caption>";
+    echo "<hr size=2 width=45% color=green>";
     echo "<table style=width:20%>";
-
+    echo "<caption>Results of: SELECT $searchterm FROM rooms</caption>";
     echo "<tr>
 
     </tr>";
@@ -114,14 +120,15 @@ if ($result) {
             }
         }
     echo "</table>";
-    echo "Your search yielded $count results";
+    echo "Your search yielded $count results.";
     echo "<br>";
-    echo "Thank you for using HawkCenter datbase.";
+    echo "Thank you for using HawkCenter database.";
     echo "<p><a href=index.php>Go Back to Hawk Home</a></p>";
 }
-
+echo "<hr size=2 width=45% color=green>";
 $conn = null;
 
+echo"<footer>&copy; 2022 Hawk Center</footer>";
 ?>
 
 
