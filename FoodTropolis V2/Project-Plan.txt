@@ -1,0 +1,26 @@
+Current Plan 11/19/2022:
+
+Chris C will be fixing the database to meet the requirements 
+given in the handout.
+Nothing should be effected by this change.
+Just make sure you have a local version of the project
+just to avoid and work being lost.
+
+Once this changed is in place, then we can start working towards checkpoint 2.
+This is essentialy when we get our features working
+in terms of our PHP and the database.
+We can also add any additional features we wish.
+
+So far we have the login and registration completed.
+We need to complete the customers side of being able to put items
+in a cart, and then complete a transaction.
+We can also list previous orders aswell to prove the order worked.
+
+The employee side will be able to add/remove products to the catalog.
+Any other ideas for employee side features are always welcome.
+
+Renato is going to be doing some work between the HTML and PHP
+of the customers side, like adding a qty selection to the products.
+
+
+
