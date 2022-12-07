@@ -5,6 +5,10 @@
 session_start();
 require_once 'database.php';
 
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: FoodTropolis_login.html');
+	exit;
+}
 ?>
 
 <html>
@@ -26,6 +30,9 @@ require_once 'database.php';
 
 <div class="topnav">
   <a class="active" href="employee_home.php">Home</a>
+  <a href="add_product_form.php">Add Product</a>
+  <a href="remove_product_form.php">Remove Product</a>
+  <a href="">Current Catalog</a>
   <div class="dropdown">
     <button class="dropbtn">Logged in as: <?=$_SESSION['name']?> &#8595;</button>
     <div class="dropdown-content">
