@@ -3,7 +3,7 @@
 // Database Systems
 // May 10 2022
 session_start();
-
+require_once 'database.php';
 ?>
 
 <html>
@@ -63,90 +63,46 @@ session_start();
 <h3>Vegetable Aisle</h3>
 </center>
 
-<div class="grid-container">
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="corn.jpg" style="width:90%">
-              <b><p>Corn<p></b>
-                <b><p>$1.29<p></b>
-                <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
+<?php
+// Preparing the query to select it from the database
+$stmt = $conn->prepare("SELECT * FROM vegetableaisle");
+$stmt->execute();
 
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="tomato.jpg" style="width:90%">
-              <b><p>Tomato<p></b>
-             <b><p>$0.79</p></b>
-             <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-             <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="Lettuce.jpg" style="width:90%">
-              <b><p>Lettuce<p></b>
-               <b><p>$1.49</p></b>
-                   <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>  
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="onions.jpg" style="width:90%">
-              <b><p>Onions<p></b>
-               <b><p>$0.92</p></b>
-                  <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="avocado.jpg" style="width:90%">
-           <b><p>Avocado<p></b>
-          <b><p>$1.19<p></b>
-            <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-           <a href="#" class="button">Add to Cart</a>
-        </div>
-     </div>
-  </div>
+$sql = "SELECT * FROM fruitaisle";
+$res = $conn->query($sql);
+$count = $res->rowCount();
 
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="cucumber.jpg" style="width:90%">
-           <b><p>Cucumber<p></b>
-           <b><p>$1.79</p></b>
-              <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-           <a href="#" class="button">Add to Cart</a>
-        </div>
-     </div>
-  </div>
-  </div>  
+echo"
+<div class=grid-container>
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>Corn<p></b>
+            <b><p>$2.59</p></b> 
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
 
-</div>
+foreach ($result as $result) {
 
-<footer>
-   <div class="content"></div>
-</footer>
-
-</center>
-</body>
-</html>
+echo"
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>$result[vegetablename]</b>
+              <b><p>$result[vegetableprice]<p></b>
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
+}
+?>
