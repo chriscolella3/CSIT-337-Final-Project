@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 05, 2022 at 08:57 PM
+-- Generation Time: Dec 08, 2022 at 11:58 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -28,11 +28,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `bakeryaisle` (
-  `bakeryid` int(255) NOT NULL,
+  `productid` int(255) NOT NULL,
   `bakeryname` char(25) NOT NULL,
-  `bakeryprice` decimal(15,0) NOT NULL,
+  `bakeryprice` double(15,0) NOT NULL,
   `bakeryimg` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bakeryaisle`
+--
+
+INSERT INTO `bakeryaisle` (`productid`, `bakeryname`, `bakeryprice`, `bakeryimg`) VALUES
+(35, 'kvpaka', 124, ''),
+(653, 'mald', 3, '');
 
 -- --------------------------------------------------------
 
@@ -41,7 +49,7 @@ CREATE TABLE `bakeryaisle` (
 --
 
 CREATE TABLE `beverageaisle` (
-  `beverageid` int(255) NOT NULL,
+  `productid` int(255) NOT NULL,
   `beveragename` char(25) NOT NULL,
   `beverageprice` decimal(15,0) NOT NULL,
   `beverageimg` blob DEFAULT NULL
@@ -54,7 +62,7 @@ CREATE TABLE `beverageaisle` (
 --
 
 CREATE TABLE `dairyaisle` (
-  `dairyid` int(255) NOT NULL,
+  `productid` int(255) NOT NULL,
   `dairyname` char(25) NOT NULL,
   `dairyprice` decimal(15,0) NOT NULL,
   `dairyimg` blob DEFAULT NULL
@@ -67,7 +75,7 @@ CREATE TABLE `dairyaisle` (
 --
 
 CREATE TABLE `frozenfoodaisle` (
-  `frozenid` int(255) NOT NULL,
+  `productid` int(255) NOT NULL,
   `frozenname` char(25) NOT NULL,
   `frozenprice` decimal(15,0) NOT NULL,
   `frozenimg` blob DEFAULT NULL
@@ -80,7 +88,7 @@ CREATE TABLE `frozenfoodaisle` (
 --
 
 CREATE TABLE `fruitaisle` (
-  `fruitid` int(255) NOT NULL,
+  `productid` int(255) NOT NULL,
   `fruitname` char(25) NOT NULL,
   `fruitprice` decimal(15,0) NOT NULL,
   `fruitimg` blob DEFAULT NULL
@@ -90,9 +98,9 @@ CREATE TABLE `fruitaisle` (
 -- Dumping data for table `fruitaisle`
 --
 
-INSERT INTO `fruitaisle` (`fruitid`, `fruitname`, `fruitprice`, `fruitimg`) VALUES
-(1, 'Apple', '5', NULL),
-(2, 'Pineapple', '8', NULL);
+INSERT INTO `fruitaisle` (`productid`, `fruitname`, `fruitprice`, `fruitimg`) VALUES
+(2, 'Pineapple', '8', NULL),
+(100, 'hundred', '100', '');
 
 -- --------------------------------------------------------
 
@@ -127,7 +135,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `usertype`) VALUES
 --
 
 CREATE TABLE `vegetableaisle` (
-  `vegetableid` int(255) NOT NULL,
+  `productid` int(255) NOT NULL,
   `vegetablename` char(25) NOT NULL,
   `vegetableprice` decimal(15,0) NOT NULL,
   `vegetableimg` blob DEFAULT NULL
@@ -141,25 +149,25 @@ CREATE TABLE `vegetableaisle` (
 -- Indexes for table `bakeryaisle`
 --
 ALTER TABLE `bakeryaisle`
-  ADD PRIMARY KEY (`bakeryid`);
+  ADD PRIMARY KEY (`productid`);
 
 --
 -- Indexes for table `beverageaisle`
 --
 ALTER TABLE `beverageaisle`
-  ADD PRIMARY KEY (`beverageid`);
+  ADD PRIMARY KEY (`productid`);
 
 --
 -- Indexes for table `dairyaisle`
 --
 ALTER TABLE `dairyaisle`
-  ADD PRIMARY KEY (`dairyid`);
+  ADD PRIMARY KEY (`productid`);
 
 --
 -- Indexes for table `fruitaisle`
 --
 ALTER TABLE `fruitaisle`
-  ADD PRIMARY KEY (`fruitid`);
+  ADD PRIMARY KEY (`productid`);
 
 --
 -- Indexes for table `users`
@@ -172,7 +180,7 @@ ALTER TABLE `users`
 -- Indexes for table `vegetableaisle`
 --
 ALTER TABLE `vegetableaisle`
-  ADD PRIMARY KEY (`vegetableid`);
+  ADD PRIMARY KEY (`productid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
