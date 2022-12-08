@@ -50,16 +50,16 @@ if (!isset($_SESSION['loggedin'])) {
   <form action="add_product.php" method="post" required>
     <table border="0">
 
-      <tr>
-        <td>Price $</td>
-        <td><input type="text" name="price" required></td>
-      </tr>
         <td>Product ID</td>
          <td><input type="text" name="productid" required></td>
       </tr>
       <tr>
         <td>Product Name</td>
         <td> <input type="text" name="productname" required></td>
+      </tr>
+      <tr>
+        <td>Price $</td>
+        <td><input type="text" name="price" required></td>
       </tr>
       <tr>
         <td>Product Picture</td>

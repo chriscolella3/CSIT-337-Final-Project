@@ -42,44 +42,86 @@ if (!isset($_SESSION['loggedin'])) {
 
   <h3>E-Commerce: Employee</h3>
   <h4>Remove Product <h4>
-  </center>
 
+  <form action="remove_product.php" method="post" required>
+    <table border="0">
+
+        <td>Product ID</td>
+         <td><input type="text" name="productid" required></td>
+      </tr>
+
+      <tr>
+        <td> 
+        <label for="producttype">Product Type:</label>
+        <select name="producttype" required>
+        <option value=""></option>
+          <option value="fruitaisle">Fruit Aisle</option>
+          <option value="vegetableaisle">Vegetable Aisle</option>
+          <option value="dairyaisle">Dairy Aisle</option>
+          <option value="beverageaisle">Beverage Aisle</option>
+          <option value="bakeryaisle">Bakery Aisle</option>
+          <option value="frozenfoodaisle">Frozen Food Aisle</option>
+        </select>
+      </td>
+        <td> 
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2"><input type="submit" value="Remove"></td>
+      </tr>
+    </table>
+  </form>
+  </center>
 </body>
 </html>
 
-
 <?php
-$stmt = $conn->prepare("SELECT * FROM fruitaisle");
-$stmt->execute();
 
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$sql = "SELECT * FROM fruitaisle";
+$res = $conn->query($sql);
+$fruitcount = $res->rowCount();
+
+$sql = "SELECT * FROM vegetableaisle";
+$res = $conn->query($sql);
+$vegetablecount = $res->rowCount();
+
+$sql = "SELECT * FROM dairyaisle";
+$res = $conn->query($sql);
+$dairycount = $res->rowCount();
+
+$sql = "SELECT * FROM beverageaisle";
+$res = $conn->query($sql);
+$beveragecount = $res->rowCount();
+
+$sql = "SELECT * FROM bakeryaisle";
+$res = $conn->query($sql);
+$bakerycount = $res->rowCount();
+
+$sql = "SELECT * FROM frozenfoodaisle";
+$res = $conn->query($sql);
+$frozencount = $res->rowCount();
 
 echo" <center>";
 echo"<table style=width:25% border=1> 
 <caption>Current # Of Products</caption>
-  
 <tr>
-<th>Fruit ID</th>
-<th>Fruit Name</th>
-<th>Fruit Price</th>
-<th>Remove</th>
-</tr>";
-
-foreach ($result as $result) {
-  echo"
-
+  <th>Fruit Aisle</th>
+  <th>Vegetable Aisle</th>
+  <th>Dairy Aisle</th>
+  <th>Beverage Aisle</th>
+  <th>Bakery Aisle</th>
+  <th>Frozen Foods Aisle</th>
+</tr>
 <tr>
-  <form action=remove_product.php method=post>
-  <td name= fruitid>$result[fruitid]</td>
-  <td name = fruitname>$result[fruitname]</td>
-  <td name = fruitprice>$result[fruitprice]</td>
-  <td><input type=submit value=Remove </td>
-  </form>
-</tr>";
+  <td>$fruitcount Products</td>
+  <td>$vegetablecount Products</td>
+  <td>$dairycount Products</td>
+  <td>$beveragecount Products</td>
+  <td>$bakerycount Products</td>
+  <td>$frozencount Products</td>
+</tr>
 
-}
-
-echo"</table>";
+</table>";
 echo" </center";
-
 ?>
