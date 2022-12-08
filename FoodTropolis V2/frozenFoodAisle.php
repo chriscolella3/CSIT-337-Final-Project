@@ -3,7 +3,7 @@
 // Database Systems
 // May 10 2022
 session_start();
-
+require_once 'database.php';
 
 ?>
 
@@ -63,91 +63,48 @@ session_start();
 <center>
 <h2>Welcome <?=$_SESSION['name']?>!</h2>
 <h3>Frozen Foods Aisle</h3>
-</center>
-<div class="grid-container">
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="vanillaice.jpg" style="width:90%">
-              <b><p>Vanila Ice Cream<p></b>
-                <b><p>$2.99<p></b>
-                <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
+<?php
 
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="chocolateice.jpg" style="width:90%">
-              <b><p>Chocolate Ice Cream<p></b>
-             <b><p>$2.99</p></b>
-             <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-             <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
+// Preparing the query to select it from the database
+$stmt = $conn->prepare("SELECT * FROM frozenfoodaisle");
+$stmt->execute();
 
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="nuggets.jpg" style="width:90%">
-              <b><p>Chicken Nuggets<p></b>
-               <b><p>$2.99</p></b>
-                   <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>  
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="drumsticks.jpg" style="width:90%">
-              <b><p>Nestle Ice Cream Drumsticks<p></b>
-               <b><p>$5.99</p></b>
-                  <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="goldenfries.jpeg" style="width:90%">
-           <b><p>Golden French Fries<p></b>
-          <b><p>$3.99<p></b>
-            <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-           <a href="#" class="button">Add to Cart</a>
-        </div>
-     </div>
-  </div>
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$sql = "SELECT * FROM frozenfoodaisle";
+$res = $conn->query($sql);
+$count = $res->rowCount();
 
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="TVDinner.jpg" style="width:90%">
-           <b><p>Banquet TV Dinner<p></b>
-           <b><p>$3.49</p></b>
-              <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-           <a href="#" class="button">Add to Cart</a>
-        </div>
-     </div>
-  </div>
-  </div>  
+echo"
+<div class=grid-container>
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>Chocolate Ice Cream<p></b>
+            <b><p>$3.99</p></b> 
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
 
-</div>
+foreach ($result as $result) {
 
-<footer>
-   <div class="content"></div>
-</footer>
-
-</center>
+echo"
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>$result[frozenname]</b>
+              <b><p>$result[frozenprice]<p></b>
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
+}
+?>
 </body>
 </html>

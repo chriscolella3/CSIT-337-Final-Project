@@ -3,7 +3,7 @@
 // Database Systems
 // May 10 2022
 session_start();
-
+require_once 'database.php';
 ?>
 
 <html>
@@ -52,73 +52,54 @@ session_start();
 <h3>Bakery Aisle</h3>
 </center>
 
-<div class="grid-container">
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="cookies.jpg" style="width:90%">
-              <p>Cookies</p>
-              <p>$4.99</p>
-              <p><button>Add to Cart</button></p>
-           </div>
-        </div>
-  </div>
 
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="cupcakes.jpg" style="width:90%">
-              <p>Cupcakes</p>
-              <p>$3.99</p>
-              <p><button>Add to Cart</button></p>
-           </div>
-        </div>
-  </div>
-
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="muffins.jpg" style="width:90%">
-              <p>Muffin</p>
-              <p>$3.99</p>
-              <p><button>Add to Cart</button></p>
-           </div>
-        </div>
-  </div>  
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="croissants.jpg" style="width:90%">
-              <p>Croissants</p>
-              <p>$2.99</p>
-              <p><button>Add to Cart</button></p>
-           </div>
-        </div>
-  </div>
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="poundcake.jpg" style="width:90%">
-           <p>Chocolate Pound Cake</p>
-           <p>$3.49</p>
-           <p><button>Add to Cart</button></p>
-        </div>
-     </div>
-  </div>
-
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="donuts.jpg" style="width:90%">
-           <p>Dounts</p>
-           <p>$5.99</p>
-           <p><button>Add to Cart</button></p>
-        </div>
-     </div>
-  </div>
-  </div>  
-</div>
 
 </center>
 </body>
 </html>
+
+<?php
+
+// Preparing the query to select it from the database
+$stmt = $conn->prepare("SELECT * FROM bakeryaisle");
+$stmt->execute();
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = "SELECT * FROM bakeryaisle";
+$res = $conn->query($sql);
+$count = $res->rowCount();
+
+echo"
+<div class=grid-container>
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>Muffin<p></b>
+            <b><p>$2.59</p></b> 
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
+
+
+foreach ($result as $result) {
+
+echo"
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>$result[bakeryname]</b>
+              <b><p>$result[bakeryprice]<p></b>
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
+}
+?>

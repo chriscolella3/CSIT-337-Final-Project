@@ -3,7 +3,7 @@
 // Database Systems
 // May 10 2022
 session_start();
-
+require_once 'database.php';
 
 ?>
 
@@ -65,90 +65,50 @@ session_start();
 <h3>Dairy Aisle</h3>
 </center>
 
-<div class="grid-container">
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="wholemilk.jpg" style="width:90%">
-              <b><p>Whole Milk<p></b>
-                <b><p>$3.99<p></b>
-                <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
-
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="kraftcheese.jpg" style="width:90%">
-              <b><p>Kraft American Cheese<p></b>
-             <b><p>$3.99</p></b>
-             <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-             <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
-
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="bluebutter.jpg" style="width:90%">
-              <b><p>Blue Bonnet Butter<p></b>
-               <b><p>$3.99</p></b>
-                   <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>  
-  <div class="grid-item">
-  <div class="column">
-           <div class="card">
-              <img src="silkmilk.jpg" style="width:90%">
-              <b><p>Silk Almond Milk<p></b>
-               <b><p>$3.99</p></b>
-                  <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-              <a href="#" class="button">Add to Cart</a>
-           </div>
-        </div>
-  </div>
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="creamcheese.jpg" style="width:90%">
-           <b><p>Philadelphia Cream Cheese<p></b>
-          <b><p>$3.99<p></b>
-            <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-           <a href="#" class="button">Add to Cart</a>
-        </div>
-     </div>
-  </div>
-
-  <div class="grid-item">
-  <div class="column">
-        <div class="card">
-           <img src="chocomilk.jpg" style="width:90%">
-           <b><p>Tru Moo Chocolate Milk<p></b>
-           <b><p>$3.99</p></b>
-              <label for="quantity">Insert Quantity of Item :</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="5">
-           <a href="#" class="button">Add to Cart</a>
-        </div>
-     </div>
-  </div>
-  </div>  
-
-</div>
-
-<footer>
-   <div class="content"></div>
-</footer>
-
 </center>
 </body>
 </html>
+<?php
+
+// Preparing the query to select it from the database
+$stmt = $conn->prepare("SELECT * FROM dairyaisle");
+$stmt->execute();
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = "SELECT * FROM dairyaisle";
+$res = $conn->query($sql);
+$count = $res->rowCount();
+
+echo"
+<div class=grid-container>
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>Milk<p></b>
+            <b><p>$2.59</p></b> 
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
+
+foreach ($result as $result) {
+
+echo"
+<div class=grid-item>
+<div class=column>
+         <div class=card>
+            <img src= style=width:90%>
+            <b><p>$result[dairyname]</b>
+              <b><p>$result[dairyprice]<p></b>
+         <form action=shoppingCart.php>
+            <input  type=submit class=button value=Add to cart></a>
+          </form>
+         </div>
+      </div>
+</div>";
+}
+?>
