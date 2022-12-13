@@ -1,0 +1,4 @@
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON *.* 
+TO `foodTropolisAdmin`@`%` 
+IDENTIFIED BY 'foodTropolis';

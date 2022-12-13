@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <!--
+Written by Chris Colella, Renato Vilchez, Christian Gelin
+Internet Computing
+Dec 13 2022
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodTropolis Employee Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+    background-image: url('StoreIm.jpg');
+  }
+  a:link {
+    color:white;  
+  }
+  a:visited {
+    color:white;  
+  }
+  a:hover {
+    color:white !important;  
+  }
+  a:active {
+    color:white;  
+  }
+  </style>
+  </head>
+<body>
+<center>
+    <h2>FoodTropolis </h2>
+    <h3>Employee Registration</h3>
+    
+    <form action="employee_register.php" method="post">
+	<br /> Enter Your Username:<br />
+    <input name="username" placeholder= "Username" type="text" size="20">
+    <br/>
+    <b>Enter Your Password:<br></b>
+    <input name="password" placeholder="Password" type="text" size="20">
+    <br/>
+
+
+	<br>
+    <input type="submit" name="submit"  class="btn btn-success mt-3" value="Register">
+      </form>
+    
+      <b><p>Already have an account? <a href="FoodTropolis_login.html">Login here</a>.</p>
+  <br/>
+  
+</center>
+</body>
+</html>

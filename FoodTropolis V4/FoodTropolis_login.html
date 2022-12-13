@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+ <!--
+Written by Chris Colella, Renato Vilchez, Christian Gelin
+Internet Computing
+Dec 13 2022
+-->
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+  background-image: url('StoreIm.jpg');
+}
+a:link {
+  color:white;  
+}
+a:visited {
+  color:white;  
+}
+a:hover {
+  color:white !important;  
+}
+a:active {
+  color:white;  
+}
+
+</style>
+<head>
+  <body>
+  <title>FoodTropolis</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<center>
+	<h2>Welcome to FoodTropolis</h2>
+	<h3>Login Page </h3>
+
+  <form action="authenticate.php" method="post">
+	<br />
+    <b>Username:<br></b>
+    <input name="username" placeholder="Enter Username" type="text" size="20">
+    <br/>
+    <br/>
+    <b>Password:<br></b>
+    <input name="password" placeholder="Enter Password" type="text" size="20">
+    <br/>
+    <br/>
+
+    <b>Usertype:<br></b>
+    <select name="usertype">
+      <option value="customer">Customer</option>
+      <option value="employee">Employee</option>
+
+    </select>
+
+	<br>
+    <input type="submit" name="submit" class="btn btn-success mt-3" value="Login to Account">
+
+  </form>
+
+<div class="col-12">
+<b><p class ="text-xl-center">Are you an Employee and don't have an account? <a href="employee_register.html">Click here to register.</a></p></b>
+
+<b><p class = "text-xl-center">Are you a Customer and don't have an account? <a href="customer_register.html">Click here to register.</a></p></b>
+</div> 
+</center>
+</body>
