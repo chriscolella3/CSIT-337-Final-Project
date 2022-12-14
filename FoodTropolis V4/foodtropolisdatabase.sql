@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 08, 2022 at 11:58 PM
+-- Host: 127.0.0.1
+-- Generation Time: Dec 15, 2022 at 12:09 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -24,23 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
---
-
-CREATE TABLE `cart` (
-  `username` char(255) NOT NULL,
-  `productid` int(255) NOT NULL,
-  `productname` char(255) NOT NULL,
-  `productprice` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cart`
---
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `bakeryaisle`
 --
 
@@ -56,8 +39,8 @@ CREATE TABLE `bakeryaisle` (
 --
 
 INSERT INTO `bakeryaisle` (`productid`, `bakeryname`, `bakeryprice`, `bakeryimg`) VALUES
-(35, 'kvpaka', 124, ''),
-(653, 'mald', 3, '');
+(1, 'Pound Cake', 4, 0x706f756e6463616b652e6a7067),
+(2, 'Cupcakes', 3, 0x63757063616b65732e6a7067);
 
 -- --------------------------------------------------------
 
@@ -70,6 +53,27 @@ CREATE TABLE `beverageaisle` (
   `beveragename` char(25) NOT NULL,
   `beverageprice` decimal(15,0) NOT NULL,
   `beverageimg` blob DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `beverageaisle`
+--
+
+INSERT INTO `beverageaisle` (`productid`, `beveragename`, `beverageprice`, `beverageimg`) VALUES
+(1, 'Fanta', '3', 0x46616e74612e6a7067),
+(2, 'Iced Tea', '3', 0x4963657465612e6a7067);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `username` char(255) NOT NULL,
+  `productid` int(255) NOT NULL,
+  `productname` char(255) NOT NULL,
+  `productprice` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -85,6 +89,14 @@ CREATE TABLE `dairyaisle` (
   `dairyimg` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `dairyaisle`
+--
+
+INSERT INTO `dairyaisle` (`productid`, `dairyname`, `dairyprice`, `dairyimg`) VALUES
+(1, 'Milk', '3', 0x77686f6c656d696c6b2e6a7067),
+(2, 'Cheese', '3', 0x6b726166746368656573652e6a7067);
+
 -- --------------------------------------------------------
 
 --
@@ -97,6 +109,14 @@ CREATE TABLE `frozenfoodaisle` (
   `frozenprice` decimal(15,0) NOT NULL,
   `frozenimg` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `frozenfoodaisle`
+--
+
+INSERT INTO `frozenfoodaisle` (`productid`, `frozenname`, `frozenprice`, `frozenimg`) VALUES
+(1, 'Fries', '4', 0x676f6c64656e66726965732e6a706567),
+(2, 'TV Dinner', '5', 0x545644696e6e65722e6a7067);
 
 -- --------------------------------------------------------
 
@@ -116,8 +136,8 @@ CREATE TABLE `fruitaisle` (
 --
 
 INSERT INTO `fruitaisle` (`productid`, `fruitname`, `fruitprice`, `fruitimg`) VALUES
-(2, 'Pineapple', '8', NULL),
-(100, 'hundred', '100', '');
+(1, 'Blueberries', '3', 0x626c7565626572726965732e6a7067),
+(2, 'Grapes', '3', 0x6772617065732e6a7067);
 
 -- --------------------------------------------------------
 
@@ -137,12 +157,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `usertype`) VALUES
-(27, 'customer24', '$2y$10$Bfjft0FE8bnrIQWROaienex11IiL5nOSdXjy2bxFgFiKkdr3QhUhG', 'customer'),
-(26, 'employee52', '$2y$10$BwGwAjN.cYHOD97a8oHb0uBCeQhcPts0ouXb04ZccxNtNrCHrDMUS', 'employee'),
-(30, 'testingpdo', '$2y$10$tFseibHhsr14ZW2FewnZ5OnXGBPHa764MZ7aFkm4XEU/6YiKHnCcO', 'customer'),
-(31, 'pleasework', '$2y$10$zBlUBlHV9HMKicC0W7Mnz.rDTRernZLJTLB16IoL38nTZebhIr4pS', 'customer'),
-(32, 'blablabla', '$2y$10$grfCLT7JeIFLQvXxFLaF8eUNlxKYKujU0k2Xjus1giwAzCLuRBpam', 'customer'),
-(33, 'jajajajajj', '$2y$10$/J.8vZgz4KPqhV9phSPRuenuAwCHGf2x/7Z/8MqFPKuKAomB/gRh.', 'customer'),
+(35, 'customer', '$2y$10$W1gefjGSplRoRC5660bag.VO6d9ul4.BxT8TySGmy.9wGm6UjPnzG', 'customer'),
 (34, 'admin', '$2y$10$s/nghFovTUPwzKKhZfSJdOo65XPxCGL4FpILkJwmorjRUURo8sWoy', 'employee');
 
 -- --------------------------------------------------------
@@ -157,6 +172,14 @@ CREATE TABLE `vegetableaisle` (
   `vegetableprice` decimal(15,0) NOT NULL,
   `vegetableimg` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `vegetableaisle`
+--
+
+INSERT INTO `vegetableaisle` (`productid`, `vegetablename`, `vegetableprice`, `vegetableimg`) VALUES
+(1, 'Cucumber', '4', 0x637563756d6265722e706e67),
+(2, 'Avocado', '5', 0x61766f6361646f2e6a7067);
 
 --
 -- Indexes for dumped tables
@@ -207,7 +230,7 @@ ALTER TABLE `vegetableaisle`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
