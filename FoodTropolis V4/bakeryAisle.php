@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title> E-Commerce Store</title>
+  <title>FoodTropolis - Bakery Aisle</title>
 </head>
 
 <link rel="stylesheet" href="navbar.css">
@@ -85,7 +85,7 @@ foreach ($result as $result) {
   <div class=column>
            <div class=card>
            <form action=shoppingCart.php method=post>
-           <img src=$result[dairyimg] style=width:150px;height:150px>
+           <img src=$result[bakeryimg] style=width:150px;height:150px>
           
               <input type=hidden id=productid name=productid value=$result[productid]>
   

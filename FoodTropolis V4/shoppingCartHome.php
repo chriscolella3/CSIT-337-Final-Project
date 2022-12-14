@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title>FoodTropolis-Fruits</title>
+  <title>FoodTropolis - Shopping Cart</title>
 </head>
 
 <link rel="stylesheet" href="navbar.css">

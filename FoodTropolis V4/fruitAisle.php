@@ -16,7 +16,6 @@ if (!isset($_SESSION['loggedin'])) {
   <title>FoodTropolis-Fruits</title>
 </head>
 
-
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="dropdown.css">
 <link rel="stylesheet" href="productCards.css">
@@ -25,7 +24,6 @@ if (!isset($_SESSION['loggedin'])) {
 
 </head>
 <body>
-
 
 <div class="topnav">
   <a href="customer_home.php">Home</a>
@@ -75,7 +73,7 @@ echo"
             <img src=orange.jpg style=width:150px;height:150px>
             <b><p>Orange<p></b>
             <b><p>$2.59</p></b> 
-         <form action=shoppingCart.php>
+         <form>
             <input  type=submit class=button value=Add to cart></a>
           </form>
          </div>

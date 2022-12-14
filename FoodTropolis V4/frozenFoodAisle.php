@@ -66,7 +66,7 @@ echo"
             <img src=vanillaice.jpg style=width:150px;height:150px>
             <b><p>Vanilla Ice Cream<p></b>
             <b><p>$3.99</p></b> 
-         <form action=shoppingCart.php>
+         <form>
             <input  type=submit class=button value=Add to cart></a>
           </form>
          </div>
@@ -81,7 +81,7 @@ foreach ($result as $result) {
   <div class=column>
            <div class=card>
            <form action=shoppingCart.php method=post>
-           <img src=$result[fozenimg] style=width:150px;height:150px>
+           <img src=$result[frozenimg] style=width:150px;height:150px>
           
               <input type=hidden id=productid name=productid value=$result[productid]>
   

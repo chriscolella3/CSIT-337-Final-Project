@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title>E-Commerce Store</title>
+  <title>FoodTropolis - Vegetable Aisle</title>
 </head>
 
 <link rel="stylesheet" href="navbar.css">
@@ -66,7 +66,7 @@ echo"
             <img src=corn.jpg style=width:150px;height:150px>
             <b><p>Corn<p></b>
             <b><p>$2.59</p></b> 
-         <form action=shoppingCart.php>
+         <form>
             <input  type=submit class=button value=Add to cart></a>
           </form>
          </div>

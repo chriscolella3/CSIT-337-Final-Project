@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title>FoodTropolis Store</title>
+  <title>FoodTropolis - Customer Home</title>
 </head>
 
 <link rel="stylesheet" href="navbar.css">
@@ -51,7 +51,6 @@ if (!isset($_SESSION['loggedin'])) {
 <h3>Welcome <?=$_SESSION['name']?>!</h3>
 <h4>Browse Our Selections!</h4>
 </center>
-
 
 <div class="grid-container">
   <div class="grid-item">
@@ -105,6 +104,5 @@ if (!isset($_SESSION['loggedin'])) {
 
 </div>
 
-</center>
 </body>
 </html>

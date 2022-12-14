@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title>E-Commerce Store</title>  
+  <title>FoodTropolis Employee Homepage</title>  
   <style>
   body{
     background: rgb(213,171,171);
@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
 </div>
 
-  <h3>E-Commerce: Employee</h3>
+  <h3>FoodTropolis: Employee</h3>
 
   <h3>Welcome <?=$_SESSION['name']?>!</h3>
 

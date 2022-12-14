@@ -12,10 +12,10 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 <html>
 <head>
-  <title>E-Commerce Store</title>  
-  <style>
+  <title>FoodTropolis - Remove Product</title>  
 
-  #aisles{
+  <style>
+#aisles {
     border: 2px solid black;
     background-color:#FFFFE0;
     margin-left: auto;
@@ -26,12 +26,12 @@ td {
   text-align: center;
 }
 
-#productcount{
+#productcount {
     border: 2px solid black;
     background-color:#FFFFE0;
   }
-
 </style>
+
 </head>
 
     <center>
@@ -54,7 +54,7 @@ td {
   </div>
 </div>
 
-  <h3>E-Commerce: Employee</h3>
+  <h3>FoodTropolis: Employee</h3>
   <h4>Remove Product <h4>
 
   <form action="remove_product.php" method="post" required>

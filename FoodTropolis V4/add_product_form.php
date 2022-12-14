@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 <html>
 <head>
-  <title>E-Commerce Store</title>  
+  <title>FoodTropolis Add Product</title>  
 
   <style>
   #aisles{
@@ -36,7 +36,6 @@ if (!isset($_SESSION['loggedin'])) {
 <link rel="stylesheet" href="dropdown.css">
 <link rel="stylesheet" href="employee_style.css">
 
-</head>
 <body>
 
 <div class="topnav">
@@ -51,7 +50,7 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
 </div>
 
-  <h3>E-Commerce: Employee</h3>
+  <h3>FoodTropolis: Employee</h3>
   <h4>Add Product <h4>
 
   <form action="add_product.php" method="post" required>

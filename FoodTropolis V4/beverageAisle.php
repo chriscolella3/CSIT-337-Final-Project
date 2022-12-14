@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-  <title>E-Commerce Store</title>
+  <title>FoodTropolis - Beverage Aisle</title>
 </head>
 
 <link rel="stylesheet" href="navbar.css">
